@@ -37,6 +37,36 @@
     <version>6.14.3</version>
     <scope>test</scope>
 </dependency>
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>1.2.5</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>3.17</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.17</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+<dependency>
+    <groupId>org.yaml</groupId>
+    <artifactId>snakeyaml</artifactId>
+    <version>1.21</version>
+</dependency>
 
 <dependency>
     <groupId>com.vimalselvam</groupId>
@@ -64,6 +94,17 @@
 	</configuration>
   
   </plugin>
+<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.21.0</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          <forkMode>never</forkMode>
+        </configuration>
+</plugin>
  
   </plugins>
    
